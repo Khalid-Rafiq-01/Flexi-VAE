@@ -1,0 +1,20 @@
+program: train.py
+name: ModelSweep
+method: bayes
+metric:
+  goal: minimize
+  name: val_loss
+parameters:
+  lr:
+    min: 0.0001
+    max: 0.001
+  batch_size:
+    values: [32, 64, 128]
+  num_epochs:
+    values: [30, 50, 100, 150]
+  beta:
+      min: 0.00001
+      max: 1.5
+  gamma:
+      min: 1.0
+      max: 4.5

@@ -1,0 +1,19 @@
+program: train.py
+name: ModelSweep
+method: bayes
+project: FlexiPropagator_2D
+metric:
+  goal: minimize
+  name: val_loss
+parameters:
+  lr:
+    min: 0.00001
+    max: 0.001
+  num_epochs:
+    values: [50, 75]
+  beta:
+      min: 0.00001
+      max: 0.001
+  gamma:
+      min: 1.0
+      max: 4.5
